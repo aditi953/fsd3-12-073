@@ -1,26 +1,228 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Store</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+    }
+
+    .hero {
+      padding: 70px 6%;
+      text-align: center;
+      background: linear-gradient(135deg, #111, #444);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: white;
+      color: #111;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .products {
+      padding: 50px 6%;
+    }
+
+    .products h2 {
+      text-align: center;
+      margin-bottom: 35px;
+      font-size: 32px;
+    }
+
+    .phone-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .phone-card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    .phone-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .phone-image {
+      height: 230px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 100px;
+      margin-bottom: 15px;
+    }
+
+    .phone-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .buy-btn {
+      border: none;
+      background: #111;
+      color: white;
+      padding: 11px 25px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      background: #111;
+      color: white;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <h1>Product Page</h1>
+  <header>
+    <div class="logo">PhoneStore</div>
 
-    <div>
-        <h2>iPhone 15</h2>
-        <img src="iphone.jpg" alt="iPhone 15" width="250">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#phones">Phones</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-        <p>Price: ₹70,000</p>
-        <p>Quantity: 1</p>
-        <p>Discount: 10%</p>
+  <section class="hero">
+    <h1>Find Your Perfect Phone</h1>
+    <p>Latest smartphones at amazing prices.</p>
+    <a href="#phones" class="btn">Shop Now</a>
+  </section>
 
-        <button>Add to Cart</button>
-        <button>Buy Now</button>
+  <section class="products" id="phones">
+    <h2>Popular Phones</h2>
+
+    <div class="phone-grid">
+
+      <div class="phone-card">
+        <div class="phone-image">📱</div>
+        <h3>Phone Pro Max</h3>
+        <p>256GB • 5G • OLED Display</p>
+        <div class="price">$999</div>
+        <button class="buy-btn" onclick="buyPhone('Phone Pro Max')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="phone-card">
+        <div class="phone-image">📱</div>
+        <h3>Galaxy Ultra</h3>
+        <p>256GB • 5G • AMOLED Display</p>
+        <div class="price">$899</div>
+        <button class="buy-btn" onclick="buyPhone('Galaxy Ultra')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="phone-card">
+        <div class="phone-image">📱</div>
+        <h3>Pixel Pro</h3>
+        <p>128GB • 5G • AI Camera</p>
+        <div class="price">$799</div>
+        <button class="buy-btn" onclick="buyPhone('Pixel Pro')">
+          Buy Now
+        </button>
+      </div>
+
+      <div class="phone-card">
+        <div class="phone-image">📱</div>
+        <h3>OnePlus Pro</h3>
+        <p>256GB • 5G • Fast Charging</p>
+        <div class="price">$699</div>
+        <button class="buy-btn" onclick="buyPhone('OnePlus Pro')">
+          Buy Now
+        </button>
+      </div>
+
     </div>
+  </section>
+
+  <footer id="contact">
+    <p>© 2026 PhoneStore. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function buyPhone(phone) {
+      alert("You selected: " + phone);
+    }
+  </script>
 
 </body>
 </html>
