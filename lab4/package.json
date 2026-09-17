@@ -1,0 +1,17 @@
+{
+  "name": "lab4",
+  "version": "1.0.0",
+  "description": "1. goto project folder (by cd)\r 2. type ```npm init-y```\r 3. open package.json\r 4. update ```type:module```\r 5. install nodemon ```npm i nodemon -D`\r 6. update script in package.json\r ```\r script{\r     \"start\": \"node app.js\",\r     \"dev\":\"nodemon prg7.js\"\r }\r ```\r 7. add node_modules to .gitignore \r 8. to run use `npm run dev`\r # REST API \r ### Representational State Transfer (REST)\r -  any backend server return only data not html file \r - REST API uses( get, post , patch , delete) method to communicate with client \r - any browser can check only get method \r - for other method type we use third party API Tester like postman , thunder client , echo API etc",
+  "main": "prj7.js",
+  "scripts": {
+    "start ": "node app.js",
+    "dev": "nodemon prg7.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
