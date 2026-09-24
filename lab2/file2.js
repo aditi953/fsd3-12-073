@@ -7,10 +7,10 @@ const readData = async( file2) =>{
     return content;
     }catch(e){
         console.log(e.message);
-        console.log("file not found");
+        console.log("file not found.....");
        }
        finally{
-        console.log("read data finished ");
+        console.log("read data finished ....");
        }   
 };
 const writeData = async(file2,data)=>

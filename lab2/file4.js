@@ -4,4 +4,4 @@ import { mkdir, rm } from "fs/promises";
 //await mkdir("uploads/images" );
 
 //remove directory
-await rm("uploads", { recursive: true });
+await rm("uploads ..", { recursive: true });
