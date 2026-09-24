@@ -1,8 +1,10 @@
 import http from "http";
+import {addUser,getUsers}from "./users.js";
 
 const server = http.createServer((req, res) => {
-  if (req.url === "/api/users" && req.method === "GET") {
-    res.end(JSON.stringify({ msg: "all users " }));
+  if (req.url.startsWith("/api/users" )&& req.method === "GET") {
+
+    res.end(JSON.stringify(getUsers()));
   }
    else if (req.url === "/api/users" && req.method === "POST") {
     let body ='';
@@ -11,8 +13,9 @@ const server = http.createServer((req, res) => {
     })
     req.on('end',()=>{
       const user=JSON.parse(body);
-      console.log(user);
-    })
+      const userCreated =addUser(user);
+      res.end(JSON.stringify({msg:"user added",userCreated}));
+    });
     res.end(JSON.stringify({ msg: "add users" }));
   }
    else if (req.url === "/api/users /1" && req.method === "GET") {

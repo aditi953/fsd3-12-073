@@ -5,13 +5,13 @@ const server = http.createServer((req, res) => {
   const product = [
     {
       name: "Iphone",
-      price: 85000,
+      price: 65000,
       qty: 2,
       discount: 15,
     },
     {
       name: "Hp Laptop",
-      price: 95000,
+      price: 85000,
       qty: 1,
       discount: 25,
     },
