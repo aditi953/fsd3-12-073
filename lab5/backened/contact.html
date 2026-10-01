@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        .contact-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .contact-content {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info,
+        .contact-form {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .contact-info h2,
+        .contact-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .contact-form textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contact-container">
+
+        <h1>Contact Us</h1>
+        <p class="intro">
+            We'd love to hear from you. Send us a message!
+        </p>
+
+        <div class="contact-content">
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+
+                <p><strong>📍 Address:</strong><br>
+                    123 Main Street, New Delhi, India
+                </p>
+
+                <p><strong>📞 Phone:</strong><br>
+                    +91 98765 43210
+                </p>
+
+                <p><strong>📧 Email:</strong><br>
+                    contact@example.com
+                </p>
+
+                <p><strong>🕒 Working Hours:</strong><br>
+                    Monday - Friday, 9:00 AM - 6:00 PM
+                </p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send a Message</h2>
+
+                <form action="#" method="post">
+
+                    <input type="text"
+                           name="name"
+                           placeholder="Your Name"
+                           required>
+
+                    <input type="email"
+                           name="email"
+                           placeholder="Your Email"
+                           required>
+
+                    <input type="text"
+                           name="subject"
+                           placeholder="Subject"
+                           required>
+
+                    <textarea name="message"
+                              placeholder="Your Message"
+                              required></textarea>
+
+                    <button type="submit">Send Message</button>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
